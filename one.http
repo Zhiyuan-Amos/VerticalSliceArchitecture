@@ -1,0 +1,14 @@
+### Valid
+POST http://localhost:5000/one
+Content-Type: application/json
+
+{
+  "foo": "foo"
+}
+
+### Invalid
+POST http://localhost:5000/one
+Content-Type: application/json
+
+{
+}
