@@ -9,10 +9,9 @@ public class Endpoint : IEndpoint
         endpoints.MapPost("/one",
                 [EndpointSummary("Summary")]
                 [EndpointDescription("Description")]
-                Results<Ok, BadRequest> (Model model, Dependency dependency) =>
+                Results<Ok, BadRequest> (Model model) =>
                 {
                     Console.WriteLine(model.Foo);
-                    Console.WriteLine(dependency.I);
                     return TypedResults.Ok();
                 }).AddEndpointFilter<ValidationFilter>();
     }
